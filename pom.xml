@@ -42,8 +42,9 @@
 	</build>
 
 	<scm>
-		<developerConnection>scm:git:git@github.com:zackrosfjord/zack-petclinic.git</developerConnection>
-	  <tag>zack-petclinic-0.0.1</tag>
-  </scm>
+		<developerConnection>scm:git:https://github.com/zackrosfjord/zack-petclinic.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+
 
 </project>
