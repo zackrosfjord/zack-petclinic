@@ -1,4 +1,4 @@
-package com.zrosfjord.zackpetclinic.model;
+package com.zrosfjord.petclinic.model;
 
 import java.time.LocalDate;
 

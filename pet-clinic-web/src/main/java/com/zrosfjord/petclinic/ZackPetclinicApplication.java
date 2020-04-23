@@ -1,4 +1,4 @@
-package com.zrosfjord.zackpetclinic;
+package com.zrosfjord.petclinic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
