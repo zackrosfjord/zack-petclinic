@@ -15,7 +15,7 @@
 	</parent>
 	<groupId>com.zrosfjord</groupId>
 	<artifactId>zack-petclinic</artifactId>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>0.0.3</version>
 	<name>zack-petclinic</name>
 	<description>Zack Spring Petclinic</description>
 
@@ -42,7 +42,7 @@
 
 	<scm>
 		<developerConnection>scm:git:git@github.com:zackrosfjord/zack-petclinic.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>zack-petclinic-0.0.3</tag>
 	</scm>
 
 
