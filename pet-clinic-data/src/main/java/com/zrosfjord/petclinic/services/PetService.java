@@ -1,16 +1,8 @@
 package com.zrosfjord.petclinic.services;
 
 
-import com.zrosfjord.petclinic.model.Pet;
+import com.zrosfjord.petclinic.models.Pet;
 
-import java.util.Set;
-
-public interface PetService {
-
-    Pet findById(Long id);
-
-    Pet save(Pet pet);
-
-    Set<Pet> findAll();
+public interface PetService extends CrudService<Pet, Long> {
 
 }

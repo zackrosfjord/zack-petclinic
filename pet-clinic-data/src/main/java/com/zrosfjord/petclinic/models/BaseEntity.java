@@ -1,4 +1,4 @@
-package com.zrosfjord.petclinic.model;
+package com.zrosfjord.petclinic.models;
 
 import java.io.Serializable;
 
