@@ -1,11 +1,11 @@
 package com.zrosfjord.petclinic.services.map;
 
 import com.zrosfjord.petclinic.models.Pet;
-import com.zrosfjord.petclinic.services.CrudService;
+import com.zrosfjord.petclinic.services.PetService;
 
 import java.util.Set;
 
-public class PetMapService extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+public class PetMapService extends AbstractMapService<Pet, Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
         return super.findAll();
