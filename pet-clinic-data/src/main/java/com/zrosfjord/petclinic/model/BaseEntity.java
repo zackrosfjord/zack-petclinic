@@ -1,4 +1,4 @@
-package com.zrosfjord.petclinic.models;
+package com.zrosfjord.petclinic.model;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

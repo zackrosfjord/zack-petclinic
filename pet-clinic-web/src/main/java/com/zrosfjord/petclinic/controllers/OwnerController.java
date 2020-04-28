@@ -1,6 +1,6 @@
 package com.zrosfjord.petclinic.controllers;
 
-import com.zrosfjord.petclinic.services.OwnerService;
+import com.zrosfjord.petclinic.service.OwnerService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;

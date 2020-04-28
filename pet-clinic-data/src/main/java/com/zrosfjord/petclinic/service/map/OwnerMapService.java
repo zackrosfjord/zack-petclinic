@@ -1,10 +1,10 @@
-package com.zrosfjord.petclinic.services.map;
+package com.zrosfjord.petclinic.service.map;
 
-import com.zrosfjord.petclinic.models.Owner;
-import com.zrosfjord.petclinic.models.Pet;
-import com.zrosfjord.petclinic.services.OwnerService;
-import com.zrosfjord.petclinic.services.PetService;
-import com.zrosfjord.petclinic.services.PetTypeService;
+import com.zrosfjord.petclinic.model.Owner;
+import com.zrosfjord.petclinic.model.Pet;
+import com.zrosfjord.petclinic.service.OwnerService;
+import com.zrosfjord.petclinic.service.PetService;
+import com.zrosfjord.petclinic.service.PetTypeService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;

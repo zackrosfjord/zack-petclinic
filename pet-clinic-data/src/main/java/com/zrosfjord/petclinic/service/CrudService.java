@@ -1,4 +1,4 @@
-package com.zrosfjord.petclinic.services;
+package com.zrosfjord.petclinic.service;
 
 import java.util.Set;
 

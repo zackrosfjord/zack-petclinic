@@ -1,6 +1,6 @@
-package com.zrosfjord.petclinic.services.map;
+package com.zrosfjord.petclinic.service.map;
 
-import com.zrosfjord.petclinic.models.BaseEntity;
+import com.zrosfjord.petclinic.model.BaseEntity;
 
 import java.util.*;
 

@@ -1,10 +1,10 @@
 package com.zrosfjord.petclinic.bootstrap;
 
-import com.zrosfjord.petclinic.models.*;
-import com.zrosfjord.petclinic.services.OwnerService;
-import com.zrosfjord.petclinic.services.PetTypeService;
-import com.zrosfjord.petclinic.services.SpecialtyService;
-import com.zrosfjord.petclinic.services.VetService;
+import com.zrosfjord.petclinic.model.*;
+import com.zrosfjord.petclinic.service.OwnerService;
+import com.zrosfjord.petclinic.service.PetTypeService;
+import com.zrosfjord.petclinic.service.SpecialtyService;
+import com.zrosfjord.petclinic.service.VetService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
