@@ -3,6 +3,8 @@ package com.zrosfjord.petclinic.models;
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "pets")
@@ -22,6 +24,9 @@ public class Pet extends BaseEntity {
     @ManyToOne
     @JoinColumn(name = "type_id")
     private PetType type;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "pet")
+    private Set<Visit> visits = new HashSet<>();
 
     public String getName() {
         return name;
@@ -55,4 +60,11 @@ public class Pet extends BaseEntity {
         this.type = type;
     }
 
+    public Set<Visit> getVisits() {
+        return visits;
+    }
+
+    public void setVisits(Set<Visit> visits) {
+        this.visits = visits;
+    }
 }
