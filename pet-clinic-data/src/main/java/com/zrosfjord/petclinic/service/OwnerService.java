@@ -2,8 +2,10 @@ package com.zrosfjord.petclinic.service;
 
 import com.zrosfjord.petclinic.model.Owner;
 
-public interface OwnerService extends CrudService<Owner, Long> {
+import java.util.Optional;
 
-    Owner findByLastName(String lastName);
+public interface OwnerService extends CrudService<Owner> {
+
+    Optional<Owner> findByLastName(String lastName);
 
 }

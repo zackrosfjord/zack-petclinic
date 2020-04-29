@@ -4,32 +4,17 @@ import com.zrosfjord.petclinic.model.Specialty;
 import com.zrosfjord.petclinic.model.Vet;
 import com.zrosfjord.petclinic.service.SpecialtyService;
 import com.zrosfjord.petclinic.service.VetService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
-import java.util.Set;
-
 @Service
-public class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
+@Profile({"map"})
+public class VetServiceMap extends AbstractMapService<Vet> implements VetService {
 
     private final SpecialtyService specialtyService;
 
-    public VetMapService(SpecialtyService specialtyService) {
+    public VetServiceMap(SpecialtyService specialtyService) {
         this.specialtyService = specialtyService;
-    }
-
-    @Override
-    public Set<Vet> findAll() {
-        return super.findAll();
-    }
-
-    @Override
-    public void deleteById(Long id) {
-        super.deleteById(id);
-    }
-
-    @Override
-    public void delete(Vet object) {
-        super.delete(object);
     }
 
     @Override
@@ -51,8 +36,4 @@ public class VetMapService extends AbstractMapService<Vet, Long> implements VetS
 
     }
 
-    @Override
-    public Vet findById(Long id) {
-        return super.findById(id);
-    }
 }

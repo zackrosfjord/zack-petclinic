@@ -1,18 +1,18 @@
 package com.zrosfjord.petclinic.service;
 
-import java.util.Set;
+import java.util.Optional;
 
-public interface CrudService<T, ID> {
+public interface CrudService<T> {
 
-    Set<T> findAll();
+    Iterable<T> findAll();
 
-    T findById(ID id);
+    Optional<T> findById(Long id);
 
     T save(T object);
 
     void delete(T object);
 
-    void deleteById(ID id);
+    void deleteById(Long id);
 
     //TODO: Add a count
 

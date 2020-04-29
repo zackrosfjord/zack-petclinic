@@ -5,40 +5,26 @@ import com.zrosfjord.petclinic.model.Pet;
 import com.zrosfjord.petclinic.service.OwnerService;
 import com.zrosfjord.petclinic.service.PetService;
 import com.zrosfjord.petclinic.service.PetTypeService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
-import java.util.Set;
+import java.util.Optional;
 
 @Service
-public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
+@Profile({"map"})
+public class OwnerServiceMap extends AbstractMapService<Owner> implements OwnerService {
 
     private final PetTypeService petTypeService;
     private final PetService petService;
 
-    public OwnerMapService(PetTypeService petTypeService, PetService petService) {
+    public OwnerServiceMap(PetTypeService petTypeService, PetService petService) {
         this.petTypeService = petTypeService;
         this.petService = petService;
     }
 
-
     @Override
-    public Owner findByLastName(String lastName) {
+    public Optional<Owner> findByLastName(String lastName) {
         return null;
-    }
-
-    @Override
-    public Set<Owner> findAll() {
-        return super.findAll();
-    }
-
-    @Override
-    public void deleteById(Long id) {
-        super.deleteById(id);
-    }
-
-    @Override
-    public void delete(Owner object) {
-        super.delete(object);
     }
 
     @Override
@@ -64,11 +50,6 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
             throw new RuntimeException("Object cannot be null!");
         }
 
-    }
-
-    @Override
-    public Owner findById(Long id) {
-        return super.findById(id);
     }
 
 }

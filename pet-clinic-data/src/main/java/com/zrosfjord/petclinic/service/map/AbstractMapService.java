@@ -1,22 +1,24 @@
 package com.zrosfjord.petclinic.service.map;
 
 import com.zrosfjord.petclinic.model.BaseEntity;
+import com.zrosfjord.petclinic.service.CrudService;
 
 import java.util.*;
 
-public abstract class AbstractMapService<T extends BaseEntity, ID extends Long> {
+public abstract class AbstractMapService<T extends BaseEntity> implements CrudService<T> {
 
     protected Map<Long, T> map = new HashMap<>();
 
-    Set<T> findAll() {
+    public Set<T> findAll() {
         return new HashSet<>(map.values());
     }
 
-    T findById(ID id) {
-        return map.get(id);
+    public Optional<T> findById(Long id) {
+        return Optional.ofNullable(map.get(id));
     }
 
-    T save(T object) {
+    @Override
+    public T save(T object) {
         if (object != null) {
             if (object.getId() == null) {
                 object.setId(getNextId());
@@ -30,11 +32,11 @@ public abstract class AbstractMapService<T extends BaseEntity, ID extends Long> 
         return object;
     }
 
-    void deleteById(ID id) {
+    public void deleteById(Long id) {
         map.remove(id);
     }
 
-    void delete(T object) {
+    public void delete(T object) {
         map.entrySet().removeIf(entry -> entry.getValue().equals(object));
     }
 
