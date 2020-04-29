@@ -6,10 +6,13 @@ import com.zrosfjord.petclinic.service.VetService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
+
 @Service
 @Profile({"jpa", "default"})
+@Transactional
 public class VetServiceJpa extends AbstractJpaService<Vet, VetRepository> implements VetService {
-    protected VetServiceJpa(VetRepository repository) {
+    public VetServiceJpa(VetRepository repository) {
         super(repository);
     }
 }
